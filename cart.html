@@ -1,0 +1,312 @@
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cart</title>
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/customStyle.css">
+    <!-- Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="row bg-dark text-light ">
+                <div class="col-md-12 text-center">
+                    <p class="uppernav pt-1">
+                        <a href="">Customer Care</a> |
+                        <a href="">Today's Offer</a> |
+                        <a href="">Download App</a> |
+                        <a href="">Advertise</a> |
+                        <a href="">Sell Product</a> |
+                        <a href="">Track Order</a> |
+                        <a href="">Terms and Conditions</a> |
+                        <a href="">Support</a> |
+                        <a href="">Delivery</a></p>
+                </div>
+            </div>
+
+            <div class="row mt-1 ">
+                <div class="col-md-2 logo mt-3">
+                    <a href="/shop/">
+                        <h3>SmartShop</h3>
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="row mt-1">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Search here" name="">
+                        </div>
+                        <div class="col-md-2 mt-2">
+                            <input type="button" value="Search" class="btn btn-success" name="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mt-3">
+                    <!-- <input type="button" value="Cart" class="btn btn-warning btn-block" name=""> -->
+                    <a class="btn btn-success  btn-block" href="cart.html">
+                        <i class="fa fa-shopping-cart"></i> Cart
+                        <span class="badge badge-light">3</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row bg-dark mt-2">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Products Categories
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Mens and Womens Fasion</a>
+                                        <a class="dropdown-item" href="#">Electronics</a>
+                                        <a class="dropdown-item" href="#">Grocery</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <span class="navbar-text">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
+                                </ul>
+                            </span>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation end -->
+
+    <div class="container">
+        <div class="container mb-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped cartTable">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> </th>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Available</th>
+                                    <th scope="col" class="text-center">Quantity</th>
+                                    <th scope="col" class="text-right">Price</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="images/cartDemoImage.png" /> </td>
+                                    <td>Product Name Dada</td>
+                                    <td>In stock</td>
+                                    <td>
+                                        <div class="input-group quantity">
+                                            <button id="dec" onClick="decrement('textBox1');"
+                                                class="border border-dark bg-dark btn btn-sm text-light p-2 pull-left"><span class="material-icons">
+                                                    remove_circle_outline
+                                                    </span></button>
+                                            <input type="text" id="textBox1" class="form-control" value="1" readonly>
+                                            <button id="inc" onClick="increment('textBox1');"
+                                                class="border border-dark bg-dark text-light p-2 btn-sm pull-right"><span class="material-icons">
+                                                    add_circle_outline
+                                                    </span></button>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">$124,90 </td>
+                                    <td class="text-right"><button class="btn btn-sm btn-danger"
+                                            onclick="showPrompt();"><span class="material-icons">
+                                                delete
+                                                </span> </button> </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/cartDemoImage.png" /> </td>
+                                    <td>Product Name Toto</td>
+                                    <td>In stock</td>
+                                    <td>
+                                        <div class="input-group quantity">
+                                            <button id="dec" onClick="decrement('textBox2');"
+                                                class="border border-dark btn btn-sm bg-dark text-light p-2 pull-left"><span class="material-icons">
+                                                    remove_circle_outline
+                                                    </span></button>
+                                            <input type="text" id="textBox2" class="form-control" value="1" readonly>
+                                            <button id="inc" onClick="increment('textBox2');"
+                                                class="border border-dark bg-dark text-light p-2 btn-sm pull-right"><span class="material-icons">
+                                                    add_circle_outline
+                                                    </span></button>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">$33,90 </td>
+                                    <td class="text-right"><button class="btn btn-sm btn-danger"
+                                            onclick="showPrompt();"><span class="material-icons">
+                                                delete
+                                                </span> </button> </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/cartDemoImage.png" /> </td>
+                                    <td>Product Name Titi</td>
+                                    <td>In stock</td>
+                                    <td>
+                                        <div class="input-group quantity">
+                                            <button id="dec" onClick="decrement('textBox3');"
+                                                class="border border-dark btn-sm bg-dark text-light p-2 pull-left"><span class="material-icons">
+                                                    remove_circle_outline
+                                                    </span></button>
+                                            <input type="text" id="textBox3" class="form-control" value="1" readonly>
+                                            <button id="inc" onClick="increment('textBox3');"
+                                                class="border border-dark bg-dark text-light p-2 btn-sm  pull-right"><span class="material-icons">
+                                                    add_circle_outline
+                                                    </span></button>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">$70,00 </td>
+                                    <td class="text-right"><button class="btn btn-sm btn-danger"
+                                            onclick="showPrompt();"><span class="material-icons">
+                                                delete
+                                                </span> </button> </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Sub-Total</td>
+                                    <td class="text-right">$255,90 </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Shipping</td>
+                                    <td class="text-right">6,90 $</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><strong>Total</strong></td>
+                                    <td class="text-right"><strong>$346,90 </strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col mb-2">
+                    <div class="row">
+                        <div class="col-sm-12  col-md-4 mb-1">
+                            <button class="btn btn-lg btn btn-block btn-warning">Continue Shopping</button>
+                        </div>
+                        <div class="col-sm-12 col-md-4 text-right mb-1">
+                            <button class="btn btn-lg btn-block btn-success text-uppercase">Update cart</button>
+                        </div>
+                        <div class="col-sm-12 col-md-4 text-right">
+                            <a href="checkout.html"><button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <br />
+    <!-- Footer -->
+    <footer class="text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-4 col-xl-3">
+                    <h5>About</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <p class="mb-0">
+                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant
+                        impression.
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                    <h5>Informations</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><a href="">Link 1</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>
+                        <li><a href="">Link 4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+                    <h5>Others links</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><a href="">Link 1</a></li>
+                        <li><a href="">Link 2</a></li>
+                        <li><a href="">Link 3</a></li>
+                        <li><a href="">Link 4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h5>Contact</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-home mr-2"></i> My company</li>
+                        <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
+                        <li><i class="fa fa-phone mr-2"></i> + 33 12 14 15 16</li>
+                        <li><i class="fa fa-print mr-2"></i> + 33 12 14 15 16</li>
+                    </ul>
+                </div>
+                <div class="col-12 copyright mt-3">
+                    <p class="float-left">
+                        <a href="#">Back to top</a>
+                    </p>
+                    <!-- <p class="text-right text-muted">created with <i class="fa fa-heart"></i> by <a href="https://t-php.fr/43-theme-ecommerce-bootstrap-4.html"><i>t-php</i></a> | <span>v. 1.0</span></p> -->
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <div class="bg-primary p-2 text-white">
+        <p>Powered by M.Shaheer khan</p>
+    </div>
+    <!-- Footer end -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2.4.2/dist/umd/popper.min.js"></script>
+    <!-- bootbox code -->
+    <script src="js/bootbox.min.js"></script>
+    <script src="js/bootbox.locales.min.js"></script>
+</body>
+
+</html>
