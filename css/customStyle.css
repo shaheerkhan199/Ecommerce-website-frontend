@@ -492,7 +492,8 @@ ul{
   .card{
     height: 80vh;
     border-radius: 15px !important;
-    background-color: rgba(0,0,0,0.4) !important;
+    /* background-color: rgba(0,0,0,0.4) !important; */
+    /* background-color: yellow !important; */
   }
   .contacts_body{
     padding:  0.75rem 0 !important;
@@ -761,6 +762,5 @@ input[type="password"],input[type="email"],input[type="number"],input[type="text
   }
   .singleProductQty{
     width: 250px !important;
-  }
-  
+  } 
 }
